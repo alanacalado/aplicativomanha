@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://logos-world.net/wp-content/uploads/2023/04/My-Little-Pony-Logo-2020.png" alt="Logo da Empresa" width="400" height="200">
+        <h3>OLÁ EXPLORADORES DE MUNDOS MÁGICOS</h3>
+        <h2>LOGIN</h2>
+        <form action="/logar" method="post">
+            <input type="text" name="ra" placeholder="RA" required>
+            <input type="submit" id = "botao" value="ENVIAR">
+        </form>
+        <a href="{{ url_for('cadastrar_aluno') }}">Cadastre-se</a>
+        <a href="#">Esqueceu seu RA?</a>
+    
+    </div>
+</body>
+</html>

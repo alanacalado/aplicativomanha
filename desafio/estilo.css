@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://buildremote.co/wp-content/uploads/2023/05/the-office-background-10.jpg-800x450.webp');
+    background-color: #00000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylea.css')}}" />
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.alphacoders.com/119/1197997.jpg');
+            background-color: #00000000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.4); 
+            padding: 20px;
+            width: 300px;
+        }
+
+        .login-container h2 {
+            color: #d50e82;
+            font-family: 'Cherry Swash', cursive;
+            font-size: 2em;
+            margin-bottom: 20px; 
+        }
+
+        .login-container input[type="text"],
+        .login-container select {
+            font-family: Arial, sans-serif;
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #fac5fa;
+            border-radius: 20px;
+            box-sizing: border-box;
+            font-size: 14px; 
+        }
+
+        .login-container select {
+            font-size: 14px; 
+            height: 40px;
+            line-height: 1.5; 
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fe0dd2;
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.4s ease;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #ec63f6;
+            color: #000000;
+        }
+
+        label {
+            display: block;
+            font-size: 14px; 
+            margin-bottom: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://pm1.aminoapps.com/7711/9ad0cf20289abf200bea0dbdc37093340c8cd8d1r1-500-500v2_00.jpg" alt="Logo da Empresa" width="100" height="100">
+        <h2>Novo Aluno</h2>
+        <form action="login.php" method="post">
+            <input type="text" name="aluno" placeholder="Nome do Aluno" required>
+            <input type="text" name="ra" placeholder="RA" required>
+
+            
+            <label for="tempo-estudo"></label>
+            <select name="tempo-estudo" id="tempo-estudo" required>
+                <option value="" disabled selected>Selecione o Tempo de Estudo</option>
+                <option value="menos-de-1-mes">Menos de 1 mês</option>
+                <option value="1-a-3-meses">1 a 3 meses</option>
+                <option value="3-a-6-meses">3 a 6 meses</option>
+                <option value="mais-de-6-meses">Mais de 6 meses</option>
+            </select>
+
+            
+            <label for="renda-familiar"></label>
+            <select name="renda-familiar" id="renda-familiar" required>
+                <option value="" disabled selected>Selecione a Renda Familiar</option>
+                <option value="ate-1-salario-minimo">Até 1 salário mínimo</option>
+                <option value="1-a-3-salarios-minimos">1 a 3 salários mínimos</option>
+                <option value="3-a-5-salarios-minimos">3 a 5 salários mínimos</option>
+                <option value="mais-de-5-salarios-minimos">Mais de 5 salários mínimos</option>
+            </select>
+
+            <input type="submit" id="botão" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

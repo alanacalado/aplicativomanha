@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Bordo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylea.css') }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Cherry Swash', cursive;
+            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b53b06f7-8e53-4d54-bcca-d21a354013bb/devbcow-9d99c5d4-45ae-4cbe-9b82-f4811fc0eab1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2I1M2IwNmY3LThlNTMtNGQ1NC1iY2NhLWQyMWEzNTQwMTNiYlwvZGV2YmNvdy05ZDk5YzVkNC00NWFlLTRjYmUtOWI4Mi1mNDgxMWZjMGVhYjEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.sGOTVUXHRhyRXsMERTwdKaBQpNCK0gHjhou4enBhI-0');
+            background-color: #00000000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em; 
+            margin-bottom: 20px;
+        }
+
+        p, label {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 1.5em; 
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            font-family: Arial, sans-serif;
+            font-size: 1em;
+            padding: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>             
+    <div class="container">
+        <h1>Diário de Bordo</h1>
+        <p>Bem-vindo à página do Diário de Bordo</p>
+    </div>
+
+    <form action="/logar" method="POST">
+        <label for="ra">RA:</label>
+        <input type="text" id="ra" name="ra">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
